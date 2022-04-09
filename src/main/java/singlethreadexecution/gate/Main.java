@@ -1,4 +1,4 @@
-package singlethreadexecution;
+package singlethreadexecution.gate;
 
 public class Main {
     public static void main(String[] args) {

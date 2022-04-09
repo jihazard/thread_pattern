@@ -1,4 +1,4 @@
-package singlethreadexecution;
+package singlethreadexecution.gate;
 
 public class UserThread extends Thread{
     private final Gate gate;
