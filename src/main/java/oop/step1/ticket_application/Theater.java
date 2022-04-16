@@ -8,14 +8,8 @@ public class Theater {
     }
 
     public void enter(Audience audience) {
-        if(audience.getBag().hasInvitation()) {
-            Ticket ticket = ticketSeller.getTicketOffice().getTicket();
-            audience.getBag().setTicket(ticket);
-        }else {
-            Ticket ticket = ticketSeller.getTicketOffice().getTicket();
-            audience.getBag().minusAmount(ticket.getFee());
-            ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
-            audience.getBag().setTicket(ticket);
-        }
+        //캡슐화
+        //캡슐화의 목적은 변경하기 쉬운 객체를 만드는 것.
+       ticketSeller.sellTo(audience);
     }
 }
